@@ -32,11 +32,8 @@ import lift from './lift';
  *      f(15); //=> true
  *      f(30); //=> false
  */
-var both = _curry2(function both(f, g) {
-  return _isFunction(f) ?
+export default _curry2((f, g)=>_isFunction(f) ?
     function _both() {
       return f.apply(this, arguments) && g.apply(this, arguments);
     } :
-    lift(and)(f, g);
-});
-export default both;
+    lift(and)(f, g));

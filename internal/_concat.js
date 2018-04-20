@@ -9,13 +9,11 @@
  *
  *      _concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
  */
-export default function _concat(set1, set2) {
-  set1 = set1 || [];
-  set2 = set2 || [];
-  var idx;
-  var len1 = set1.length;
-  var len2 = set2.length;
-  var result = [];
+export default (set1=[], set2=[])=>{
+  let idx;
+  const len1 = set1.length;
+  const len2 = set2.length;
+  const result = [];
 
   idx = 0;
   while (idx < len1) {
@@ -28,4 +26,4 @@ export default function _concat(set1, set2) {
     idx += 1;
   }
   return result;
-}
+};

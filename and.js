@@ -20,7 +20,4 @@ import _curry2 from './internal/_curry2';
  *      R.and(false, true); //=> false
  *      R.and(false, false); //=> false
  */
-var and = _curry2(function and(a, b) {
-  return a && b;
-});
-export default and;
+export default  _curry2((a, b)=>a && b);

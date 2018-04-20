@@ -27,14 +27,13 @@ import _curry3 from './internal/_curry3';
  * @symb R.adjust(f, -1, [a, b]) = [a, f(b)]
  * @symb R.adjust(f, 0, [a, b]) = [f(a), b]
  */
-var adjust = _curry3(function adjust(fn, idx, list) {
+export default _curry3((fn, idx, list)=>{
   if (idx >= list.length || idx < -list.length) {
     return list;
   }
-  var start = idx < 0 ? list.length : 0;
-  var _idx = start + idx;
-  var _list = _concat(list);
+  const start = idx < 0 ? list.length : 0;
+  const _idx = start + idx;
+  const _list = _concat(list);
   _list[_idx] = fn(list[_idx]);
   return _list;
 });
-export default adjust;

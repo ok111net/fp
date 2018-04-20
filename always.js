@@ -1,4 +1,4 @@
-import _curry1 from './internal/_curry1';
+//import _curry1 from './internal/_curry1';
 
 
 /**
@@ -20,9 +20,4 @@ import _curry1 from './internal/_curry1';
  *      var t = R.always('Tee');
  *      t(); //=> 'Tee'
  */
-var always = _curry1(function always(val) {
-  return function() {
-    return val;
-  };
-});
-export default always;
+export default val=>()=>val;
