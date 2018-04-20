@@ -11,8 +11,6 @@ import _xdropLastWhile from './internal/_xdropLastWhile';
  * function returns a `falsy` value. The predicate function is applied to one argument:
  * *(value)*.
  *
- * Acts as a transducer if a transformer is given in list position.
- *
  * @func
  * @memberOf R
  * @since v0.16.0
@@ -25,7 +23,7 @@ import _xdropLastWhile from './internal/_xdropLastWhile';
  * @see R.takeLastWhile, R.addIndex, R.drop, R.dropWhile
  * @example
  *
- *      const lteThree = x => x <= 3;
+ *      var lteThree = x => x <= 3;
  *
  *      R.dropLastWhile(lteThree, [1, 2, 3, 4, 3, 2, 1]); //=> [1, 2, 3, 4]
  *

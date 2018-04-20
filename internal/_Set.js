@@ -1,4 +1,4 @@
-import _includes from './_includes';
+import _contains from './_contains';
 
 
 function _Set() {
@@ -115,7 +115,7 @@ function hasOrAdd(item, shouldAdd, set) {
           }
           return false;
         }
-        if (!_includes(item, set._items[type])) {
+        if (!_contains(item, set._items[type])) {
           if (shouldAdd) {
             set._items[type].push(item);
           }
@@ -156,7 +156,7 @@ function hasOrAdd(item, shouldAdd, set) {
         return false;
       }
       // scan through all previously applied items
-      if (!_includes(item, set._items[type])) {
+      if (!_contains(item, set._items[type])) {
         if (shouldAdd) {
           set._items[type].push(item);
         }

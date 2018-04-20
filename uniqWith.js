@@ -1,4 +1,4 @@
-import _includesWith from './internal/_includesWith';
+import _containsWith from './internal/_containsWith';
 import _curry2 from './internal/_curry2';
 
 
@@ -18,7 +18,7 @@ import _curry2 from './internal/_curry2';
  * @return {Array} The list of unique items.
  * @example
  *
- *      const strEq = R.eqBy(String);
+ *      var strEq = R.eqBy(String);
  *      R.uniqWith(strEq)([1, '1', 2, 1]); //=> [1, 2]
  *      R.uniqWith(strEq)([{}, {}]);       //=> [{}]
  *      R.uniqWith(strEq)([1, '1', 1]);    //=> [1]
@@ -31,7 +31,7 @@ var uniqWith = _curry2(function uniqWith(pred, list) {
   var item;
   while (idx < len) {
     item = list[idx];
-    if (!_includesWith(pred, item, result)) {
+    if (!_containsWith(pred, item, result)) {
       result[result.length] = item;
     }
     idx += 1;

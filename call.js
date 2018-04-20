@@ -21,11 +21,11 @@ import curry from './curry';
  *
  *      R.call(R.add, 1, 2); //=> 3
  *
- *      const indentN = R.pipe(R.repeat(' '),
+ *      var indentN = R.pipe(R.repeat(' '),
  *                           R.join(''),
  *                           R.replace(/^(?!$)/gm));
  *
- *      const format = R.converge(R.call, [
+ *      var format = R.converge(R.call, [
  *                                  R.pipe(R.prop('indent'), indentN),
  *                                  R.prop('value')
  *                              ]);

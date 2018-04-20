@@ -19,7 +19,6 @@ import path from './path';
  *
  *      R.prop('x', {x: 100}); //=> 100
  *      R.prop('x', {}); //=> undefined
- *      R.compose(R.inc, R.prop('x'))({ x: 3 }) //=> 4
  */
 
 var prop = _curry2(function prop(p, obj) { return path([p], obj); });

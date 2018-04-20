@@ -17,7 +17,7 @@ import _isString from './internal/_isString';
  * @return {*}
  * @example
  *
- *      const list = ['foo', 'bar', 'baz', 'quux'];
+ *      var list = ['foo', 'bar', 'baz', 'quux'];
  *      R.nth(1, list); //=> 'bar'
  *      R.nth(-1, list); //=> 'quux'
  *      R.nth(-99, list); //=> undefined

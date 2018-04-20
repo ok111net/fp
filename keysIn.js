@@ -17,9 +17,9 @@ import _curry1 from './internal/_curry1';
  * @see R.keys, R.valuesIn
  * @example
  *
- *      const F = function() { this.x = 'X'; };
+ *      var F = function() { this.x = 'X'; };
  *      F.prototype.y = 'Y';
- *      const f = new F();
+ *      var f = new F();
  *      R.keysIn(f); //=> ['x', 'y']
  */
 var keysIn = _curry1(function keysIn(obj) {

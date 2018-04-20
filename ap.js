@@ -16,7 +16,7 @@ import map from './map';
  * @category Function
  * @sig [a -> b] -> [a] -> [b]
  * @sig Apply f => f (a -> b) -> f a -> f b
- * @sig (r -> a -> b) -> (r -> a) -> (r -> b)
+ * @sig (a -> b -> c) -> (a -> b) -> (a -> c)
  * @param {*} applyF
  * @param {*} applyX
  * @return {*}

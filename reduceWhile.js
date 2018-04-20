@@ -25,11 +25,11 @@ import _reduced from './internal/_reduced';
  * @see R.reduce, R.reduced
  * @example
  *
- *      const isOdd = (acc, x) => x % 2 === 1;
- *      const xs = [1, 3, 5, 60, 777, 800];
+ *      var isOdd = (acc, x) => x % 2 === 1;
+ *      var xs = [1, 3, 5, 60, 777, 800];
  *      R.reduceWhile(isOdd, R.add, 0, xs); //=> 9
  *
- *      const ys = [2, 4, 6]
+ *      var ys = [2, 4, 6]
  *      R.reduceWhile(isOdd, R.add, 111, ys); //=> 111
  */
 var reduceWhile = _curryN(4, [], function _reduceWhile(pred, fn, a, list) {

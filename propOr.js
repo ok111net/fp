@@ -1,5 +1,5 @@
 import _curry3 from './internal/_curry3';
-import pathOr from './pathOr';
+import _has from './internal/_has';
 
 
 /**
@@ -18,17 +18,17 @@ import pathOr from './pathOr';
  * @return {*} The value of given property of the supplied object or the default value.
  * @example
  *
- *      const alice = {
+ *      var alice = {
  *        name: 'ALICE',
  *        age: 101
  *      };
- *      const favorite = R.prop('favoriteLibrary');
- *      const favoriteWithDefault = R.propOr('Ramda', 'favoriteLibrary');
+ *      var favorite = R.prop('favoriteLibrary');
+ *      var favoriteWithDefault = R.propOr('Ramda', 'favoriteLibrary');
  *
  *      favorite(alice);  //=> undefined
  *      favoriteWithDefault(alice);  //=> 'Ramda'
  */
 var propOr = _curry3(function propOr(val, p, obj) {
-  return pathOr(val, [p], obj);
+  return (obj != null && _has(p, obj)) ? obj[p] : val;
 });
 export default propOr;

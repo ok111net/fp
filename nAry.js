@@ -18,12 +18,12 @@ import _curry2 from './internal/_curry2';
  * @see R.binary, R.unary
  * @example
  *
- *      const takesTwoArgs = (a, b) => [a, b];
+ *      var takesTwoArgs = (a, b) => [a, b];
  *
  *      takesTwoArgs.length; //=> 2
  *      takesTwoArgs(1, 2); //=> [1, 2]
  *
- *      const takesOneArg = R.nAry(1, takesTwoArgs);
+ *      var takesOneArg = R.nAry(1, takesTwoArgs);
  *      takesOneArg.length; //=> 1
  *      // Only `n` arguments are passed to the wrapped function
  *      takesOneArg(1, 2); //=> [1, undefined]

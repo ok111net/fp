@@ -11,8 +11,6 @@ import any from './any';
  *
  * Dispatches to the `any` method of the second argument, if present.
  *
- * Acts as a transducer if a transformer is given in list position.
- *
  * @func
  * @memberOf R
  * @since v0.12.0
@@ -24,8 +22,8 @@ import any from './any';
  * @see R.all, R.any
  * @example
  *
- *      const isEven = n => n % 2 === 0;
- *      const isOdd = n => n % 2 === 1;
+ *      var isEven = n => n % 2 === 0;
+ *      var isOdd = n => n % 2 === 1;
  *
  *      R.none(isEven, [1, 3, 5, 7, 9, 11]); //=> true
  *      R.none(isOdd, [1, 3, 5, 7, 8, 11]); //=> false

@@ -17,7 +17,7 @@ import keys from './keys';
  * @see R.invertObj
  * @example
  *
- *      const raceResultsByFirstName = {
+ *      var raceResultsByFirstName = {
  *        first: 'alice',
  *        second: 'jake',
  *        third: 'alice',

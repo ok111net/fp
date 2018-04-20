@@ -39,11 +39,11 @@ import _curryN from './internal/_curryN';
  * @see R.curry
  * @example
  *
- *      const sumArgs = (...args) => R.sum(args);
+ *      var sumArgs = (...args) => R.sum(args);
  *
- *      const curriedAddFourNumbers = R.curryN(4, sumArgs);
- *      const f = curriedAddFourNumbers(1, 2);
- *      const g = f(3);
+ *      var curriedAddFourNumbers = R.curryN(4, sumArgs);
+ *      var f = curriedAddFourNumbers(1, 2);
+ *      var g = f(3);
  *      g(4); //=> 10
  */
 var curryN = _curry2(function curryN(length, fn) {

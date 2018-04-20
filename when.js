@@ -18,11 +18,11 @@ import _curry3 from './internal/_curry3';
  * @param {*}        x          An object to test with the `pred` function and
  *                              pass to `whenTrueFn` if necessary.
  * @return {*} Either `x` or the result of applying `x` to `whenTrueFn`.
- * @see R.ifElse, R.unless, R.cond
+ * @see R.ifElse, R.unless
  * @example
  *
  *      // truncate :: String -> String
- *      const truncate = R.when(
+ *      var truncate = R.when(
  *        R.propSatisfies(R.gt(R.__, 10), 'length'),
  *        R.pipe(R.take(10), R.append('…'), R.join(''))
  *      );

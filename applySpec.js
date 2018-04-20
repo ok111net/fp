@@ -26,7 +26,7 @@ import values from './values';
  * @see R.converge, R.juxt
  * @example
  *
- *      const getMetrics = R.applySpec({
+ *      var getMetrics = R.applySpec({
  *        sum: R.add,
  *        nested: { mul: R.multiply }
  *      });

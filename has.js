@@ -1,5 +1,5 @@
 import _curry2 from './internal/_curry2';
-import hasPath from './hasPath';
+import _has from './internal/_has';
 
 
 /**
@@ -15,18 +15,16 @@ import hasPath from './hasPath';
  * @return {Boolean} Whether the property exists.
  * @example
  *
- *      const hasName = R.has('name');
+ *      var hasName = R.has('name');
  *      hasName({name: 'alice'});   //=> true
  *      hasName({name: 'bob'});     //=> true
  *      hasName({});                //=> false
  *
- *      const point = {x: 0, y: 0};
- *      const pointHas = R.has(R.__, point);
+ *      var point = {x: 0, y: 0};
+ *      var pointHas = R.has(R.__, point);
  *      pointHas('x');  //=> true
  *      pointHas('y');  //=> true
  *      pointHas('z');  //=> false
  */
-var has = _curry2(function has(prop, obj) {
-  return hasPath([prop], obj);
-});
+var has = _curry2(_has);
 export default has;

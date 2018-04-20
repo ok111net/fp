@@ -19,13 +19,13 @@ import always from './always';
  * @see R.adjust
  * @example
  *
- *      R.update(1, '_', ['a', 'b', 'c']);      //=> ['a', '_', 'c']
- *      R.update(-1, '_', ['a', 'b', 'c']);     //=> ['a', 'b', '_']
+ *      R.update(1, 11, [0, 1, 2]);     //=> [0, 11, 2]
+ *      R.update(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
  * @symb R.update(-1, a, [b, c]) = [b, a]
  * @symb R.update(0, a, [b, c]) = [a, c]
  * @symb R.update(1, a, [b, c]) = [b, a]
  */
 var update = _curry3(function update(idx, x, list) {
-  return adjust(idx, always(x), list);
+  return adjust(always(x), idx, list);
 });
 export default update;

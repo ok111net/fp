@@ -17,7 +17,7 @@ import reverse from './reverse';
  * @see R.pipeP
  * @example
  *
- *      const db = {
+ *      var db = {
  *        users: {
  *          JOE: {
  *            name: 'Joe',
@@ -27,12 +27,12 @@ import reverse from './reverse';
  *      }
  *
  *      // We'll pretend to do a db lookup which returns a promise
- *      const lookupUser = (userId) => Promise.resolve(db.users[userId])
- *      const lookupFollowers = (user) => Promise.resolve(user.followers)
+ *      var lookupUser = (userId) => Promise.resolve(db.users[userId])
+ *      var lookupFollowers = (user) => Promise.resolve(user.followers)
  *      lookupUser('JOE').then(lookupFollowers)
  *
  *      //  followersForUser :: String -> Promise [UserId]
- *      const followersForUser = R.composeP(lookupFollowers, lookupUser);
+ *      var followersForUser = R.composeP(lookupFollowers, lookupUser);
  *      followersForUser('JOE').then(followers => console.log('Followers:', followers))
  *      // Followers: ["STEVE","SUZY"]
  */

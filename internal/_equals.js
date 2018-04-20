@@ -1,8 +1,8 @@
 import _arrayFromIterator from './_arrayFromIterator';
-import _includesWith from './_includesWith';
+import _containsWith from './_containsWith';
 import _functionName from './_functionName';
 import _has from './_has';
-import _objectIs from './_objectIs';
+import identical from '../identical';
 import keys from '../keys';
 import type from '../type';
 
@@ -26,13 +26,13 @@ function _uniqContentEquals(aIterator, bIterator, stackA, stackB) {
   }
 
   // if *a* array contains any element that is not included in *b*
-  return !_includesWith(function(b, aItem) {
-    return !_includesWith(eq, aItem, b);
+  return !_containsWith(function(b, aItem) {
+    return !_containsWith(eq, aItem, b);
   }, b, a);
 }
 
 export default function _equals(a, b, stackA, stackB) {
-  if (_objectIs(a, b)) {
+  if (identical(a, b)) {
     return true;
   }
 
@@ -68,12 +68,12 @@ export default function _equals(a, b, stackA, stackB) {
     case 'Boolean':
     case 'Number':
     case 'String':
-      if (!(typeof a === typeof b && _objectIs(a.valueOf(), b.valueOf()))) {
+      if (!(typeof a === typeof b && identical(a.valueOf(), b.valueOf()))) {
         return false;
       }
       break;
     case 'Date':
-      if (!_objectIs(a.valueOf(), b.valueOf())) {
+      if (!identical(a.valueOf(), b.valueOf())) {
         return false;
       }
       break;

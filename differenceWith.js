@@ -1,4 +1,4 @@
-import _includesWith from './internal/_includesWith';
+import _containsWith from './internal/_containsWith';
 import _curry3 from './internal/_curry3';
 
 
@@ -19,9 +19,9 @@ import _curry3 from './internal/_curry3';
  * @see R.difference, R.symmetricDifference, R.symmetricDifferenceWith
  * @example
  *
- *      const cmp = (x, y) => x.a === y.a;
- *      const l1 = [{a: 1}, {a: 2}, {a: 3}];
- *      const l2 = [{a: 3}, {a: 4}];
+ *      var cmp = (x, y) => x.a === y.a;
+ *      var l1 = [{a: 1}, {a: 2}, {a: 3}];
+ *      var l2 = [{a: 3}, {a: 4}];
  *      R.differenceWith(cmp, l1, l2); //=> [{a: 1}, {a: 2}]
  */
 var differenceWith = _curry3(function differenceWith(pred, first, second) {
@@ -29,8 +29,8 @@ var differenceWith = _curry3(function differenceWith(pred, first, second) {
   var idx = 0;
   var firstLen = first.length;
   while (idx < firstLen) {
-    if (!_includesWith(pred, first[idx], second) &&
-        !_includesWith(pred, first[idx], out)) {
+    if (!_containsWith(pred, first[idx], second) &&
+        !_containsWith(pred, first[idx], out)) {
       out.push(first[idx]);
     }
     idx += 1;

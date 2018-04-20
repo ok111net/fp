@@ -15,7 +15,7 @@ import curryN from './curryN';
  * @return {*} The result of invoking `fn` with its first two parameters' order reversed.
  * @example
  *
- *      const mergeThree = (a, b, c) => [].concat(a, b, c);
+ *      var mergeThree = (a, b, c) => [].concat(a, b, c);
  *
  *      mergeThree(1, 2, 3); //=> [1, 2, 3]
  *

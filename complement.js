@@ -18,7 +18,7 @@ import not from './not';
  * @see R.not
  * @example
  *
- *      const isNotNil = R.complement(R.isNil);
+ *      var isNotNil = R.complement(R.isNil);
  *      isNil(null); //=> true
  *      isNotNil(null); //=> false
  *      isNil(7); //=> false

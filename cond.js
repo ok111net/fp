@@ -20,10 +20,9 @@ import reduce from './reduce';
  * @sig [[(*... -> Boolean),(*... -> *)]] -> (*... -> *)
  * @param {Array} pairs A list of [predicate, transformer]
  * @return {Function}
- * @see R.ifElse, R.unless, R.when
  * @example
  *
- *      const fn = R.cond([
+ *      var fn = R.cond([
  *        [R.equals(0),   R.always('water freezes at 0°C')],
  *        [R.equals(100), R.always('water boils at 100°C')],
  *        [R.T,           temp => 'nothing special happens at ' + temp + '°C']

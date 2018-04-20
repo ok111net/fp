@@ -17,9 +17,9 @@ import _curry1 from './internal/_curry1';
  *         and prototype properties.
  * @example
  *
- *      const F = function() { this.x = 'X'; };
+ *      var F = function() { this.x = 'X'; };
  *      F.prototype.y = 'Y';
- *      const f = new F();
+ *      var f = new F();
  *      R.toPairsIn(f); //=> [['x','X'], ['y','Y']]
  */
 var toPairsIn = _curry1(function toPairsIn(obj) {

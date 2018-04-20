@@ -29,15 +29,15 @@ import _xreduceBy from './internal/_xreduceBy';
  * @see R.groupBy, R.reduce
  * @example
  *
- *      const reduceToNamesBy = R.reduceBy((acc, student) => acc.concat(student.name), []);
- *      const namesByGrade = reduceToNamesBy(function(student) {
- *        const score = student.score;
+ *      var reduceToNamesBy = R.reduceBy((acc, student) => acc.concat(student.name), []);
+ *      var namesByGrade = reduceToNamesBy(function(student) {
+ *        var score = student.score;
  *        return score < 65 ? 'F' :
  *               score < 70 ? 'D' :
  *               score < 80 ? 'C' :
  *               score < 90 ? 'B' : 'A';
  *      });
- *      const students = [{name: 'Lucy', score: 92},
+ *      var students = [{name: 'Lucy', score: 92},
  *                      {name: 'Drew', score: 85},
  *                      // ...
  *                      {name: 'Bart', score: 62}];

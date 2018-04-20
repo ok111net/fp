@@ -20,10 +20,10 @@ import map from './map';
  * @example
  *
  *       //  get :: String -> Object -> Maybe *
- *       const get = R.curry((propName, obj) => Maybe(obj[propName]))
+ *       var get = R.curry((propName, obj) => Maybe(obj[propName]))
  *
  *       //  getStateCode :: Maybe String -> Maybe String
- *       const getStateCode = R.composeK(
+ *       var getStateCode = R.composeK(
  *         R.compose(Maybe.of, R.toUpper),
  *         get('state'),
  *         get('address'),

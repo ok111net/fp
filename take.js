@@ -28,7 +28,7 @@ import slice from './slice';
  *      R.take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
  *      R.take(3, 'ramda');               //=> 'ram'
  *
- *      const personnel = [
+ *      var personnel = [
  *        'Dave Brubeck',
  *        'Paul Desmond',
  *        'Eugene Wright',
@@ -39,7 +39,7 @@ import slice from './slice';
  *        'Ron Crotty'
  *      ];
  *
- *      const takeFive = R.take(5);
+ *      var takeFive = R.take(5);
  *      takeFive(personnel);
  *      //=> ['Dave Brubeck', 'Paul Desmond', 'Eugene Wright', 'Joe Morello', 'Gerry Mulligan']
  * @symb R.take(-1, [a, b]) = [a, b]
