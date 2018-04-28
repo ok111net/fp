@@ -1,4 +1,3 @@
-import _curry2 from './internal/_curry2';
 
 
 /**
@@ -21,4 +20,4 @@ import _curry2 from './internal/_curry2';
 /*var add = _curry2(function add(a, b) {
   return Number(a) + Number(b);
 });*/
-export default _curry2((a,b)=>a+b);
+export default a=>b=>a+b;

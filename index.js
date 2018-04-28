@@ -247,6 +247,10 @@ import zipWith from './zipWith';
 import every from './every';
 import some from './some';
 import push from './push';
+import includes from './includes';
+import flip2 from './flip2';
+import flip3 from './flip3';
+import flip4 from './flip4';
 
 export default {
   F,
@@ -498,4 +502,8 @@ export default {
   every,
   some,
   push,
+  includes,
+  flip2,
+  flip3,
+  flip4,
 };

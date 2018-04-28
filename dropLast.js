@@ -1,7 +1,5 @@
 import _curry2 from './internal/_curry2';
-import _dispatchable from './internal/_dispatchable';
-import _dropLast from './internal/_dropLast';
-import _xdropLast from './internal/_xdropLast';
+import {sliceFn as slice} from './slice';
 
 
 /**
@@ -25,5 +23,4 @@ import _xdropLast from './internal/_xdropLast';
  *      R.dropLast(4, ['foo', 'bar', 'baz']); //=> []
  *      R.dropLast(3, 'ramda');               //=> 'ra'
  */
-var dropLast = _curry2(_dispatchable([], _xdropLast, _dropLast));
-export default dropLast;
+export default _curry2((n, xs)=>slice(0,-n,xs));

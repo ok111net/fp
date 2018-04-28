@@ -1,4 +1,4 @@
-import slice from './slice';
+import {sliceFn as slice} from './slice';
 
 
 /**
@@ -25,5 +25,4 @@ import slice from './slice';
  *      R.init('a');    //=> ''
  *      R.init('');     //=> ''
  */
-var init = slice(0, -1);
-export default init;
+export default list=>slice(0, -1,list);
